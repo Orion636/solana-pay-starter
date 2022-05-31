@@ -1,16 +1,52 @@
-import React from "react";
-import HeadComponent from '../components/Head';
+import React, { useEffect, useState } from 'react';
+import Product from "../components/Product";
+import { useWallet } from '@solana/wallet-adapter-react';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "0rion636";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
+  const { publicKey } = useWallet();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    if (publicKey) {
+      fetch(`/api/fetchProducts`)
+        .then(response => response.json())
+        .then(data => {
+          setProducts(data);
+          console.log("Products", data);
+        });
+    }
+  }, [publicKey]);
+
+  const renderNotConnectedContainer = () => (
+     <div className="button-container">
+      <WalletMultiButton className="cta-button connect-wallet-button" />
+    </div>
+  );
   
+  const renderItemBuyContainer = () => (
+    <div className="products-container">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </div>
+  );
+
+  const renderConnectedContainer = () => (
+    <div>
+      <iframe height="480" src="https://www.addictinggames.com/embed/html5-games/23732" scrolling="no"></iframe>
+    </div>
+  );
+  
+
+
   
   return (
     <div className="App">
-      <HeadComponent/>
       <div className="container">
         <header className="header-container">
           <p className="header"> Orion's Pay to Play Arcade  🎮</p>
@@ -18,7 +54,8 @@ const App = () => {
         </header>
 
         <main>
-        <iframe src="https://giphy.com/embed/l2Sqg1iEWObH3oz2E" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/southparkgifs-l2Sqg1iEWObH3oz2E">via GIPHY</a></p>
+           {/* We only render the connect button if public key doesn't exist */}
+           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
         <div className="footer-container">
