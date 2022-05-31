@@ -13,12 +13,12 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
-          <p className="sub-text">The only emoji store that accepts sh*tcoins</p>
+          <p className="header"> Orion's Pay to Play Arcade  🎮</p>
+          <p className="sub-text">Why game for free, when you can pay me money?</p>
         </header>
 
         <main>
-          <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+        <iframe src="https://giphy.com/embed/l2Sqg1iEWObH3oz2E" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/southparkgifs-l2Sqg1iEWObH3oz2E">via GIPHY</a></p>
         </main>
 
         <div className="footer-container">
