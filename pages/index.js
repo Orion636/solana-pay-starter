@@ -18,7 +18,7 @@ const App = () => {
 
   const renderNotConnectedContainer = () => (
     <div>
-      <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+      <iframe src="https://giphy.com/embed/xTiTnwgQ8Wjs1sUB4k" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/southpark-comedy-central-10x08-xTiTnwgQ8Wjs1sUB4k">via GIPHY</a></p>
 
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
