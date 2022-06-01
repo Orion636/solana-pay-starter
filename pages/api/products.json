@@ -1,11 +1,20 @@
 [
-    {
-      "id": 1,
-      "name": "Fruit Maniac",
-      "price": "0.09",
-      "description": "You thought elden ring was good anon? Just wait til you try Fruit Maniac",
-      "image_url": "https://i.imgur.com/rVD8bjt.png",
-      "filename": "Emojis.zip",
-      "hash": "QmRCqjksmumF8WPx8RuNqzPC2gDzFZeh5XFo7cu3PgK4VS"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Fruit Maniac",
+    "price": 0.09,
+    "description": "You thought elden ring was good anon? Just wait til you try Fruit Maniac",
+    "image_url": "https://gateway.ipfscdn.io/ipfs/QmRCqjksmumF8WPx8RuNqzPC2gDzFZeh5XFo7cu3PgK4VS/Screen%20Shot%202022-05-31%20at%204.16.04%20PM.png",
+    "filename": "Emojis.zip",
+    "hash": "QmQjsbmzjKtZ1ud2i964NwGsHoKB3zcY9KESqSfqDZ2kg4"
+  },
+  {
+    "id": 2,
+    "name": "Flying",
+    "price": ".50",
+    "image_url": "https://gateway.pinata.cloud/ipfs/QmPEU8oz2HsC3uiGHbQHea6NsrXTp29hFSRjTACBnXxE4X",
+    "description": "Flying Game!",
+    "filename": "flying.zip",
+    "hash": "QmZjjSqZP3tziJn89wXsnrdDKk66d2GLZEVVApUBa1tduy"
+  }
+]
