@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CreateProduct from "../components/CreateProduct";
+import CreateProduct from "../components/createProduct";
 import Product from "../components/Product";
 import HeadComponent from '../components/Head';
 
